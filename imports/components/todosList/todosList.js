@@ -52,6 +52,33 @@ class TodosListCtrl {
 }
 
 
+setChecked(task) {
+
+  // Set the checked property to the opposite of its current value
+
+  Tasks.update(task._id, {
+
+    $set: {
+
+      checked: !task.checked
+
+    },
+
+  });
+
+}
+
+
+
+removeTask(task) {
+
+  Tasks.remove(task._id);
+
+}
+
+
+
+
 
 }
 
