@@ -31,6 +31,28 @@ class TodosListCtrl {
 
   }
 
+  addTask(newTask) {
+
+  // Insert a task into the collection
+
+  Tasks.insert({
+
+    text: newTask,
+
+    createdAt: new Date
+
+  });
+
+
+
+  // Clear form
+
+  this.newTask = '';
+
+}
+
+
+
 }
 
 
